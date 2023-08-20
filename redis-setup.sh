@@ -1,3 +1,2 @@
-sudo echo "supervised systemd" >> /etc/redis/redis.conf
-sudo systemctl restart redis-server
-sudo systemctl enable redis-server
+#!/usr/bin/env bash
+systemctl restart redis-server
