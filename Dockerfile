@@ -18,6 +18,7 @@ RUN apt-get install -y libssl-dev libreadline-dev zlib1g-dev autoconf bison buil
 
 # Dev user
 RUN adduser devel
+RUN sed -i "s/sudo:x:27:/sudo:x:27:devel/" /etc/group
 WORKDIR /home/devel
 USER devel
 RUN echo 'export PATH=$PATH:~/.rbenv/bin' >> ~/.bashrc
